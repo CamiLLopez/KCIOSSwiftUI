@@ -44,12 +44,13 @@ final class KCSuperpoderesIOS_entregaTests: XCTestCase {
     }
     
     func testHeroRowView () throws {
-         
+
          let view = HeroRowView(hero: Hero(id: 1011334, name: "3-D Man", description: "", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: ".jpg")))
          
-         let image = try view.inspect().find(viewWithId: 0)
+        let image = try view.inspect().find(viewWithId: 0)
         let heroName = try view.inspect().find(viewWithId: 1)
         let name = try heroName.text().string()
+      
         XCTAssertNotNil(image)
         XCTAssertNotNil(heroName)
         XCTAssertNotEqual("", name)

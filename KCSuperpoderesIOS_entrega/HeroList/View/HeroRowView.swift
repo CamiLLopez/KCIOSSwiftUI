@@ -9,31 +9,53 @@ import SwiftUI
 
 struct HeroRowView: View {
     
+    @Environment(\.colorScheme) var colorScheme
     var hero: Hero
     
     var body: some View {
-       
+        
         VStack{
-            AsyncImage(url: URL(string: "\(hero.thumbnail.path).\(hero.thumbnail.thumbnailExtension)")){
-                Image in
-                Image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .cornerRadius(8)
-                    .padding([.leading, .trailing], 15)
-                    .opacity(0.88)
-            }placeholder:{
-                SpinnerView()
-            }
-            .id(0)
-            
-            Text("\(hero.name)")
-                .font(.title2)
-                .foregroundColor(.black)
-                .opacity(0.7)
-                .bold()
-                .id(1)
+            if colorScheme == .light {
+                AsyncImage(url: URL(string: "\(hero.thumbnail.path).\(hero.thumbnail.thumbnailExtension)")){
+                    Image in
+                    Image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(8)
+                        .padding([.leading, .trailing], 15)
+                        .opacity(0.88)
+                }placeholder:{
+                    SpinnerView()
+                }
+                .id(0)
                 
+                Text("\(hero.name)")
+                    .font(.title2)
+                    .foregroundColor(.black)
+                    .opacity(0.7)
+                    .bold()
+                    .id(1)
+                
+            }else{
+                AsyncImage(url: URL(string: "\(hero.thumbnail.path).\(hero.thumbnail.thumbnailExtension)")){
+                    Image in
+                    Image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(8)
+                        .padding([.leading, .trailing], 15)
+                        .opacity(0.9)
+                }placeholder:{
+                    SpinnerView()
+                }
+                .id(0)
+                
+                Text("\(hero.name)")
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .bold()
+                    .id(1)
+            }
         }
     }
 }

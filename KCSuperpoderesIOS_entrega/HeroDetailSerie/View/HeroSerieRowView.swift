@@ -9,39 +9,68 @@ import SwiftUI
 
 struct HeroSerieRowView: View {
     
+    @Environment(\.colorScheme) var colorScheme
     var serie: HeroSerie
-
+    
     var body: some View {
         VStack{
-            
-            Text("\(serie.title)")
-                .font(.title2)
-                .foregroundColor(.black)
-                .opacity(0.9)
-                .padding(10)
-                .bold()
-                .id(0)
-
-            AsyncImage(url: URL(string: "\(serie.thumbnail.path).\(serie.thumbnail.thumbnailExtension)")){
-                Image in
-                Image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .cornerRadius(5)
+            if colorScheme == .light {
+                Text("\(serie.title)")
+                    .font(.title2)
+                    .foregroundColor(.black)
+                    .opacity(0.9)
+                    .padding(10)
+                    .bold()
+                    .id(0)
+                
+                
+                AsyncImage(url: URL(string: "\(serie.thumbnail.path).\(serie.thumbnail.thumbnailExtension)")){
+                    Image in
+                    Image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .cornerRadius(5)
+                        .padding([.leading, .trailing], 20)
+                        .opacity(0.78)
+                        .id(1)
+                }placeholder:{
+                    SpinnerView()
+                }
+                Text("\(serie.description ?? "No description found for this serie")")
+                    .font(.title3)
                     .padding([.leading, .trailing], 20)
-                    .opacity(0.78)
-                    .id(1)
-            }placeholder:{
-                SpinnerView()
+                    .foregroundColor(.gray)
+                    .bold()
+                    .id(2)
+            }else{
+                Text("\(serie.title)")
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .padding(10)
+                    .bold()
+                    .id(0)
+                
+                
+                AsyncImage(url: URL(string: "\(serie.thumbnail.path).\(serie.thumbnail.thumbnailExtension)")){
+                    Image in
+                    Image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .cornerRadius(5)
+                        .padding([.leading, .trailing], 20)
+                        .opacity(0.9)
+                        .id(1)
+                }placeholder:{
+                    SpinnerView()
+                }
+                Text("\(serie.description ?? "No description found for this serie")")
+                    .font(.title3)
+                    .padding([.leading, .trailing], 20)
+                    .foregroundColor(.gray)
+                    .bold()
+                    .id(2)
             }
-            Text("\(serie.description ?? "No description found for this serie")")
-                .font(.title3)
-                .padding([.leading, .trailing], 20)
-                .foregroundColor(.gray)
-                .bold()
-                .id(2)
         }
-        
     }
 }
 

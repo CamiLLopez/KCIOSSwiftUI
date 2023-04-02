@@ -20,6 +20,7 @@ struct HeroSerieRowView: View {
                 .opacity(0.9)
                 .padding(10)
                 .bold()
+                .id(0)
 
             AsyncImage(url: URL(string: "\(serie.thumbnail.path).\(serie.thumbnail.thumbnailExtension)")){
                 Image in
@@ -29,6 +30,7 @@ struct HeroSerieRowView: View {
                     .cornerRadius(5)
                     .padding([.leading, .trailing], 20)
                     .opacity(0.78)
+                    .id(1)
             }placeholder:{
                 Text("Cargando..")
                     .bold()
@@ -43,6 +45,7 @@ struct HeroSerieRowView: View {
                 .padding([.leading, .trailing], 20)
                 .foregroundColor(.gray)
                 .bold()
+                .id(2)
         }
         
     }

@@ -19,8 +19,8 @@ struct HeroRowView: View {
                 Image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .cornerRadius(10)
-                    .padding([.leading, .trailing], 20)
+                    .cornerRadius(8)
+                    .padding([.leading, .trailing], 15)
                     .opacity(0.88)
             }placeholder:{
                 Text("Cargando..")
@@ -31,11 +31,15 @@ struct HeroRowView: View {
                     .padding([.leading, .trailing], 20)
                     .padding([.bottom, .top], 10)
             }
+            .id(0)
             
             Text("\(hero.name)")
-                .font(.title)
-                .foregroundColor(.gray)
+                .font(.title2)
+                .foregroundColor(.black)
+                .opacity(0.7)
                 .bold()
+                .id(1)
+                
         }
     }
 }

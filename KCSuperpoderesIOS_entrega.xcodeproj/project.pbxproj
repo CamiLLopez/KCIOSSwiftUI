@@ -43,6 +43,15 @@
 		DF8334F229D8B82E0069DC41 /* HeroSerieRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8334F129D8B82E0069DC41 /* HeroSerieRowView.swift */; };
 		DF8334F329D8B82E0069DC41 /* HeroSerieRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8334F129D8B82E0069DC41 /* HeroSerieRowView.swift */; };
 		DF8334F429D8B82E0069DC41 /* HeroSerieRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8334F129D8B82E0069DC41 /* HeroSerieRowView.swift */; };
+		DF8334F529D8C4700069DC41 /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8334CB29D770DE0069DC41 /* BaseNetwork.swift */; };
+		DF8334F729D8C4740069DC41 /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8334CB29D770DE0069DC41 /* BaseNetwork.swift */; };
+		DF8334F829D8C5090069DC41 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8334C829D76FE50069DC41 /* HeroModel.swift */; };
+		DF8334F929D8C50A0069DC41 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8334C829D76FE50069DC41 /* HeroModel.swift */; };
+		DF8334FA29D8C50E0069DC41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF83348F29D0A6030069DC41 /* ContentView.swift */; };
+		DF8334FB29D8C5100069DC41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF83348F29D0A6030069DC41 /* ContentView.swift */; };
+		DF8334FE29D9660C0069DC41 /* SerieModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8334FC29D9660C0069DC41 /* SerieModelTest.swift */; };
+		DF83350129D967870069DC41 /* HeroModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF83350029D967870069DC41 /* HeroModelTest.swift */; };
+		DF83350429D968E40069DC41 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = DF83350329D968E40069DC41 /* ViewInspector */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +94,8 @@
 		DF8334E929D8AD840069DC41 /* HeroSerieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSerieDetailView.swift; sourceTree = "<group>"; };
 		DF8334ED29D8ADFD0069DC41 /* ViewModelSerieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelSerieDetail.swift; sourceTree = "<group>"; };
 		DF8334F129D8B82E0069DC41 /* HeroSerieRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSerieRowView.swift; sourceTree = "<group>"; };
+		DF8334FC29D9660C0069DC41 /* SerieModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieModelTest.swift; sourceTree = "<group>"; };
+		DF83350029D967870069DC41 /* HeroModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF83350429D968E40069DC41 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				DF83349E29D0A6040069DC41 /* KCSuperpoderesIOS_entregaTests.swift */,
+				DF8334FC29D9660C0069DC41 /* SerieModelTest.swift */,
+				DF83350029D967870069DC41 /* HeroModelTest.swift */,
 			);
 			path = KCSuperpoderesIOS_entregaTests;
 			sourceTree = "<group>";
@@ -294,6 +308,9 @@
 				DF83349C29D0A6040069DC41 /* PBXTargetDependency */,
 			);
 			name = KCSuperpoderesIOS_entregaTests;
+			packageProductDependencies = (
+				DF83350329D968E40069DC41 /* ViewInspector */,
+			);
 			productName = KCSuperpoderesIOS_entregaTests;
 			productReference = DF83349A29D0A6040069DC41 /* KCSuperpoderesIOS_entregaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -348,6 +365,9 @@
 				Base,
 			);
 			mainGroup = DF83348129D0A6030069DC41;
+			packageReferences = (
+				DF83350229D968E40069DC41 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = DF83348B29D0A6030069DC41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -415,11 +435,16 @@
 				DF8334DD29D8331E0069DC41 /* HeroRowView.swift in Sources */,
 				DF8334E129D8334C0069DC41 /* ViewModelHeroList.swift in Sources */,
 				DF8334D529D832190069DC41 /* StatusModel.swift in Sources */,
+				DF83350129D967870069DC41 /* HeroModelTest.swift in Sources */,
+				DF8334F829D8C5090069DC41 /* HeroModel.swift in Sources */,
 				DF8334D129D82AB20069DC41 /* HeroSerieModel.swift in Sources */,
 				DF8334CF29D82AAE0069DC41 /* ThumbnailModel.swift in Sources */,
+				DF8334FE29D9660C0069DC41 /* SerieModelTest.swift in Sources */,
 				DF8334EF29D8ADFD0069DC41 /* ViewModelSerieDetail.swift in Sources */,
 				DF8334F329D8B82E0069DC41 /* HeroSerieRowView.swift in Sources */,
+				DF8334FA29D8C50E0069DC41 /* ContentView.swift in Sources */,
 				DF8334D929D832AA0069DC41 /* HeroListView.swift in Sources */,
+				DF8334F529D8C4700069DC41 /* BaseNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +453,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF8334E229D8334C0069DC41 /* ViewModelHeroList.swift in Sources */,
+				DF8334F929D8C50A0069DC41 /* HeroModel.swift in Sources */,
+				DF8334FB29D8C5100069DC41 /* ContentView.swift in Sources */,
 				DF8334D629D832190069DC41 /* StatusModel.swift in Sources */,
 				DF8334AB29D0A6040069DC41 /* KCSuperpoderesIOS_entregaUITestsLaunchTests.swift in Sources */,
 				DF8334DA29D832AA0069DC41 /* HeroListView.swift in Sources */,
@@ -436,6 +463,7 @@
 				DF8334D229D82AB30069DC41 /* HeroSerieModel.swift in Sources */,
 				DF8334DE29D8331E0069DC41 /* HeroRowView.swift in Sources */,
 				DF8334A929D0A6040069DC41 /* KCSuperpoderesIOS_entregaUITests.swift in Sources */,
+				DF8334F729D8C4740069DC41 /* BaseNetwork.swift in Sources */,
 				DF8334EC29D8AD840069DC41 /* HeroSerieDetailView.swift in Sources */,
 				DF8334F429D8B82E0069DC41 /* HeroSerieRowView.swift in Sources */,
 			);
@@ -583,6 +611,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "KCSuperpoderesIOS-entrega-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Marvel Heroes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -612,6 +641,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "KCSuperpoderesIOS-entrega-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Marvel Heroes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -745,6 +775,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF83350229D968E40069DC41 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				branch = 0.9.6;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF83350329D968E40069DC41 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF83350229D968E40069DC41 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF83348229D0A6030069DC41 /* Project object */;
 }

@@ -56,4 +56,67 @@ final class KCSuperpoderesIOS_entregaTests: XCTestCase {
         
         XCTAssertGreaterThanOrEqual(view.hero.id, 1)
      }
+    
+    func testHeroSeries () throws{
+        
+        var suscriptor = Set<AnyCancellable>()
+        let expectation = self.expectation(description: "Lista de series")
+        
+        
+        let viewModel = ViewModelSerieDetail(testingMode: true, characterID: 1011334)
+        XCTAssertNotNil(viewModel)
+        
+        viewModel.series.publisher
+            .sink { completion in
+                switch completion{
+                case .finished:
+                    XCTAssertEqual(1, 1)
+                    expectation.fulfill()
+                case .failure:
+                    XCTAssertEqual(1, 2)
+                    expectation.fulfill()
+                }
+            } receiveValue: { datos in
+                
+                XCTAssertNotNil(datos)
+                XCTAssertGreaterThanOrEqual(3, datos.count)
+            }
+            .store(in: &suscriptor)
+        
+        viewModel.getSeriesByHeroeTesting()
+        
+        self.waitForExpectations(timeout: 10)
+
+    }
+    
+    func testHero () throws{
+        
+        var suscriptor = Set<AnyCancellable>()
+        let expectation = self.expectation(description: "Lista de heroes Marvel")
+        
+        
+        let viewModel = ViewModelHeroList(testingMode: true)
+        XCTAssertNotNil(viewModel)
+        
+        viewModel.heros.publisher
+            .sink { completion in
+                switch completion{
+                case .finished:
+                    XCTAssertEqual(1, 1)
+                    expectation.fulfill()
+                case .failure:
+                    XCTAssertEqual(1, 2)
+                    expectation.fulfill()
+                }
+            } receiveValue: { datos in
+                
+                XCTAssertNotNil(datos)
+                XCTAssertGreaterThanOrEqual(4, datos.count)
+            }
+            .store(in: &suscriptor)
+        
+        viewModel.getHerosTesting()
+        
+        self.waitForExpectations(timeout: 10)
+    }
 }

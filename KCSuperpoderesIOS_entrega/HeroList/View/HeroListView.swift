@@ -19,8 +19,7 @@ struct HeroListView: View {
                NavigationLink{
                    
                    HeroSerieDetailView(viewModel: ViewModelSerieDetail(characterID: hero.id))
-                       
-                   
+
                  } label: {
                  HeroRowView(hero: hero)
                 }

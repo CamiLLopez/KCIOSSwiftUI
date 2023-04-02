@@ -23,13 +23,7 @@ struct HeroRowView: View {
                     .padding([.leading, .trailing], 15)
                     .opacity(0.88)
             }placeholder:{
-                Text("Cargando..")
-                    .bold()
-                    .foregroundColor(.blue)
-                    .opacity(0.6)
-                    .font(.subheadline)
-                    .padding([.leading, .trailing], 20)
-                    .padding([.bottom, .top], 10)
+                SpinnerView()
             }
             .id(0)
             

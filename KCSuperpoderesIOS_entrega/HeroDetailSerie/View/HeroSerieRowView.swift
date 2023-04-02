@@ -32,13 +32,7 @@ struct HeroSerieRowView: View {
                     .opacity(0.78)
                     .id(1)
             }placeholder:{
-                Text("Cargando..")
-                    .bold()
-                    .foregroundColor(.blue)
-                    .opacity(0.6)
-                    .font(.title3)
-                    .padding([.leading, .trailing], 20)
-                    .padding([.bottom, .top], 10)
+                SpinnerView()
             }
             Text("\(serie.description ?? "No description found for this serie")")
                 .font(.title3)

@@ -52,6 +52,9 @@
 		DF8334FE29D9660C0069DC41 /* SerieModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8334FC29D9660C0069DC41 /* SerieModelTest.swift */; };
 		DF83350129D967870069DC41 /* HeroModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF83350029D967870069DC41 /* HeroModelTest.swift */; };
 		DF83350429D968E40069DC41 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = DF83350329D968E40069DC41 /* ViewInspector */; };
+		DF83350629D989310069DC41 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF83350529D989310069DC41 /* SpinnerView.swift */; };
+		DF83350729D989310069DC41 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF83350529D989310069DC41 /* SpinnerView.swift */; };
+		DF83350829D989310069DC41 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF83350529D989310069DC41 /* SpinnerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,7 @@
 		DF8334F129D8B82E0069DC41 /* HeroSerieRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSerieRowView.swift; sourceTree = "<group>"; };
 		DF8334FC29D9660C0069DC41 /* SerieModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieModelTest.swift; sourceTree = "<group>"; };
 		DF83350029D967870069DC41 /* HeroModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModelTest.swift; sourceTree = "<group>"; };
+		DF83350529D989310069DC41 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				DF8334CD29D82AAE0069DC41 /* ThumbnailModel.swift */,
+				DF83350529D989310069DC41 /* SpinnerView.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				DF8334D829D832AA0069DC41 /* HeroListView.swift in Sources */,
 				DF8334C929D76FE50069DC41 /* HeroModel.swift in Sources */,
 				DF8334DC29D8331E0069DC41 /* HeroRowView.swift in Sources */,
+				DF83350629D989310069DC41 /* SpinnerView.swift in Sources */,
 				DF8334F229D8B82E0069DC41 /* HeroSerieRowView.swift in Sources */,
 				DF8334EA29D8AD840069DC41 /* HeroSerieDetailView.swift in Sources */,
 				DF8334EE29D8ADFD0069DC41 /* ViewModelSerieDetail.swift in Sources */,
@@ -436,6 +442,7 @@
 				DF8334E129D8334C0069DC41 /* ViewModelHeroList.swift in Sources */,
 				DF8334D529D832190069DC41 /* StatusModel.swift in Sources */,
 				DF83350129D967870069DC41 /* HeroModelTest.swift in Sources */,
+				DF83350729D989310069DC41 /* SpinnerView.swift in Sources */,
 				DF8334F829D8C5090069DC41 /* HeroModel.swift in Sources */,
 				DF8334D129D82AB20069DC41 /* HeroSerieModel.swift in Sources */,
 				DF8334CF29D82AAE0069DC41 /* ThumbnailModel.swift in Sources */,
@@ -453,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF8334E229D8334C0069DC41 /* ViewModelHeroList.swift in Sources */,
+				DF83350829D989310069DC41 /* SpinnerView.swift in Sources */,
 				DF8334F929D8C50A0069DC41 /* HeroModel.swift in Sources */,
 				DF8334FB29D8C5100069DC41 /* ContentView.swift in Sources */,
 				DF8334D629D832190069DC41 /* StatusModel.swift in Sources */,
